@@ -1,25 +1,25 @@
+﻿//Importação de bibliotecas
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using UnityEngine.UIElements;
-using Vector2 = System.Numerics.Vector2;
-using Vector3 = System.Numerics.Vector3;
 
 public class Player : MonoBehaviour
 {
-
+    //Variável pública que o valor poderá ser trocado quando quiser na engine
     public float speed;
+    //Inicialização das variáveis que irão pegar os componentes no Player
+    private Rigidbody2D rig;
+    
 
-    // Start is called before the first frame update
+    //Método que é chamado uma vez ao iniciar
     void Start()
     {
-        
+        //As variáveis pegam o componente do Player
+        rig = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
+    //Método que é chamado a cada frame
     void Update()
     {
-       Vector3 movement = new Vector3(Input.GetAxis("Horizontal")* speed, Input.GetAxis("Vertical")* speed, 0f);
+        rig.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, Input.GetAxis("Vertical")* speed);
     }
 }
