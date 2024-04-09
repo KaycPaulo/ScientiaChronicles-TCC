@@ -6,6 +6,7 @@ using UnityEngine;
 
 public enum MaterialType{
     metal,
+    animal,
     plant,
     synthetic
 }
