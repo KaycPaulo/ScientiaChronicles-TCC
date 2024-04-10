@@ -5,10 +5,10 @@ using UnityEngine;
 
 
 public enum MaterialType{
-    metal,
-    animal,
-    plant,
-    synthetic
+    Minerals,
+    animals,
+    Natural,
+    synthetics
 }
 
 [CreateAssetMenu(fileName = "New Item", menuName ="Create Item")]
