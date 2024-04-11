@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
     public float speed;
     //Inicialização das variáveis que irão pegar os componentes no Player
     private Rigidbody2D rig;
+
     
 
     //Método que é chamado uma vez ao iniciar
@@ -21,5 +23,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         rig.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, Input.GetAxis("Vertical")* speed);
+        ZLock();
+    }
+
+
+    void ZLock(){
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f);
     }
 }
