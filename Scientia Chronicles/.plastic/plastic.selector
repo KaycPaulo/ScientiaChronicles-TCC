@@ -1,0 +1,4 @@
+repository "Scientia Chronicles@KatsuStars@cloud"
+  path "/"
+    br "/main"
+    co "/main"
