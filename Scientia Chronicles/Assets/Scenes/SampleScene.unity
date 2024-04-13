@@ -5728,12 +5728,12 @@ GameObject:
   - component: {fileID: 1326691617}
   - component: {fileID: 1326691616}
   m_Layer: 5
-  m_Name: Dialogue
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1326691616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5876,13 +5876,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344263217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 466f5bb2b96164a448f386e0ab46f0e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6efa40c6811c432409abe19f60a15647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Uicontainer: {fileID: 524195775}
-  _image: {fileID: 555391698}
-  _talkerName: {fileID: 0}
-  _dialogue: {fileID: 0}
 --- !u!1 &1361387207
 GameObject:
   m_ObjectHideFlags: 0
@@ -14286,10 +14282,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824271748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c80d7b52509ea534bae80c1b8e739901, type: 3}
+  m_Script: {fileID: 11500000, guid: 13b04e2bfa6ca164ca18ce7cca410b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogues: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
