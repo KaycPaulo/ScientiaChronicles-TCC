@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         isWalking = false;
     }
     //Método que é chamado a cada frame
-    void Update()
+    void FixedUpdate()
     {
         inputX = Input.GetAxis("Horizontal");
         inputY = Input.GetAxis("Vertical");
