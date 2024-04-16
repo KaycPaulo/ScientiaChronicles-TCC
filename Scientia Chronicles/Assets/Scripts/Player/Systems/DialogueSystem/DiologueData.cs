@@ -12,5 +12,7 @@ public class DiologueData : ScriptableObject
 [Serializable]
 public class DiologueSentence{
     public Talker talkerData;
+
+    [TextArea]
     public string[] diologues;
 }

@@ -1,29 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class DialogueBar : MonoBehaviour
+public class ProfileBox : MonoBehaviour
 {
+
     // Start is called before the first frame update
-    private Image dialogBox;
+    private Image profile;
     private RectTransform rectTransform;
-    private Vector2 HiddenPosition = new Vector2(0, -165);
-    private Vector2 VisiblePosition = new Vector2(0, 165);
-    public Image image;
+    private Vector2 HiddenPosition = new Vector2(430, -533);
+    private Vector2 VisiblePosition = new Vector2(430, 0);
     private float animationspeed = 100;
-    private void Awake(){
-        dialogBox = GetComponent<Image>();
+    private void Awake()
+    {
+        profile = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
     }
+
     void Start()
     {
         rectTransform.anchoredPosition = HiddenPosition;
     }
 
-    public IEnumerator ShowBar(){
+    public IEnumerator ShowProfile(){
         while(rectTransform.anchoredPosition.y < VisiblePosition.y){
             rectTransform.anchoredPosition += Vector2.up * animationspeed * Time.deltaTime;
             yield return null;
@@ -32,7 +33,7 @@ public class DialogueBar : MonoBehaviour
     }
 
 
-    public IEnumerator HideBar(){
+    public IEnumerator HideProfile(){
         while(rectTransform.anchoredPosition.y > HiddenPosition.y){
             rectTransform.anchoredPosition -= Vector2.up * animationspeed * Time.deltaTime;
             yield return null;
@@ -40,11 +41,5 @@ public class DialogueBar : MonoBehaviour
         rectTransform.anchoredPosition = HiddenPosition;
     }
 
-     public void UpdateImagePosition(Vector2 newPosition)
-    {
-        if (image != null)
-        {
-            image.rectTransform.anchoredPosition = newPosition;
-        }
-    }
+
 }

@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
   Sentences:
-  - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
-    diologues:
-    - 
-    - 
   - talkerData: {fileID: 0}
-    diologues: []
+    diologues:
+    - "Ol\xE1 caro Jogador!!"
+    - "Sou um assistente de pesquisas que trabalha para a senhora Mayuri, eu soube
+      que vc \xE9 o mais novo Aprendiz dela!!"
