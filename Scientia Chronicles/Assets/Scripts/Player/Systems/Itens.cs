@@ -11,7 +11,7 @@ public enum MaterialType{
     synthetics
 }
 
-[CreateAssetMenu(fileName = "New Item", menuName ="Create Item")]
+[CreateAssetMenu(fileName ="New item", menuName ="ScriptableObject/Create Item")]
 public class Itens : ScriptableObject
 {
     public Sprite Icon;

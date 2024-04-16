@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fa20d31a37108b468dddf5a178b74e1, type: 3}
-  m_Name: New Item
+  m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
+  m_Name: New Dialogue
   m_EditorClassIdentifier: 
-  Icon: {fileID: -814477238, guid: 2af391437b774fa4189de29276cc75d1, type: 3}
-  Name: Elucidator
-  Description: Uma espada demociaca muito poderosa
-  materialType: 0
+  Sentences:
+  - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
+    diologues:
+    - 
+    - 
+  - talkerData: {fileID: 0}
+    diologues: []
