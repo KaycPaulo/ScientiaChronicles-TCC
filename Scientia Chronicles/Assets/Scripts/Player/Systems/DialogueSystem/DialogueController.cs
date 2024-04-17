@@ -32,7 +32,9 @@ public class DialogueController : MonoBehaviour
             talkerName.SetText(sentence.talkerData.talkerName);
             profile.sprite = sentence.talkerData.sprite;
             foreach(var message in sentence.messages){
-                dialogueText.text = message;
+                for(int i = 0; i < message.Length; i++){
+                    dialogueText.text = message;
+                }
             } 
         }
         
