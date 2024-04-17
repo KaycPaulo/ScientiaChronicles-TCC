@@ -2070,10 +2070,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBar: {fileID: 2020250450}
+  diologueData: {fileID: 0}
   profile: {fileID: 1735847721}
   talkerName: {fileID: 283734162}
   dialogueText: {fileID: 1188740486}
-  intervalBetween: 1
 --- !u!1 &152997300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,7 +2326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5776,7 +5776,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1406346646, guid: 147c40ccab9393a4481accbd979ac727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5956,7 +5956,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &1188740487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14310,8 +14310,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -14340,11 +14340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427f53483b97be647809ce273a69b97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 0}
-  rectTransform: {fileID: 0}
-  HiddenPosition: {x: 430, y: -533}
-  VisiblePosition: {x: 430, y: 0}
-  animationspeed: 100
 --- !u!1 &1751562886
 GameObject:
   m_ObjectHideFlags: 3

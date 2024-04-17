@@ -13,7 +13,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image profile;
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private Text dialogueText;
-    [SerializeField] private float intervalBetween = 1;
+    //[SerializeField] private float intervalBetween = 1;
 
     void Start(){
         GameEvents.Instance.OnStartDiologue += HandleStartDialog;
@@ -27,7 +27,14 @@ public class DialogueController : MonoBehaviour
 
     private IEnumerator StartDialog(DiologueData data){
         yield return dialogueBar.ShowBar();
-        yield return dialogueBar.HideBar();
+        foreach (var sentence in data.Sentences)
+        {
+            talkerName.SetText(sentence.talkerData.talkerName);
+            profile.sprite = sentence.talkerData.sprite;
+            dialogueText.text = sentence.messages;  
+        }
+        
+        //yield return dialogueBar.HideBar();
     }
 
     private IEnumerator EndDialog(){

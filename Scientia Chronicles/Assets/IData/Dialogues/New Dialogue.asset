@@ -12,10 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
   m_Name: New Dialogue
   m_EditorClassIdentifier: 
-  talkerdata: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
   Sentences:
-  - talkerData: {fileID: 0}
-    diologues:
-    - "Ol\xE1 caro Jogador!!"
-    - "Sou um assistente de pesquisas que trabalha para a senhora Mayuri, eu soube
-      que vc \xE9 o mais novo Aprendiz dela!!"
+  - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
+    messages: Ola mundo!!
