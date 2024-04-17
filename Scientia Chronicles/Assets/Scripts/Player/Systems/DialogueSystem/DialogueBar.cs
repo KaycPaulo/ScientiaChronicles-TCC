@@ -40,11 +40,4 @@ public class DialogueBar : MonoBehaviour
         rectTransform.anchoredPosition = HiddenPosition;
     }
 
-     public void UpdateImagePosition(Vector2 newPosition)
-    {
-        if (image != null)
-        {
-            image.rectTransform.anchoredPosition = newPosition;
-        }
-    }
 }

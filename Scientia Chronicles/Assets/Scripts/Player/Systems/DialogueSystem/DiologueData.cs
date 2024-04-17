@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "ScriptableObject/Create Dialogue")]
 public class DiologueData : ScriptableObject
 {
+    public Talker talkerdata;
     public List<DiologueSentence> Sentences;
 }
 
