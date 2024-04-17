@@ -14263,7 +14263,6 @@ GameObject:
   - component: {fileID: 1735847720}
   - component: {fileID: 1735847722}
   - component: {fileID: 1735847721}
-  - component: {fileID: 1735847723}
   m_Layer: 5
   m_Name: Profile
   m_TagString: Untagged
@@ -14310,7 +14309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14328,18 +14327,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735847719}
   m_CullTransparentMesh: 1
---- !u!114 &1735847723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735847719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427f53483b97be647809ce273a69b97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1751562886
 GameObject:
   m_ObjectHideFlags: 3
@@ -14581,6 +14568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+  talkerdt: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

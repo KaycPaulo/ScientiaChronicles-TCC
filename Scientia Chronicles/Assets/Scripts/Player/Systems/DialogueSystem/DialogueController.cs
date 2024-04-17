@@ -31,10 +31,12 @@ public class DialogueController : MonoBehaviour
         {
             talkerName.SetText(sentence.talkerData.talkerName);
             profile.sprite = sentence.talkerData.sprite;
-            dialogueText.text = sentence.messages;  
+            foreach(var message in sentence.messages){
+                dialogueText.text = message;
+            } 
         }
         
-        //yield return dialogueBar.HideBar();
+        yield return dialogueBar.HideBar();
     }
 
     private IEnumerator EndDialog(){

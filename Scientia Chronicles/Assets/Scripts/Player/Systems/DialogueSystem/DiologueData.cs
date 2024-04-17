@@ -14,5 +14,5 @@ public class DiologueSentence{
     public Talker talkerData;
 
     [TextArea]
-    public string messages;
+    public List<string>  messages;
 }

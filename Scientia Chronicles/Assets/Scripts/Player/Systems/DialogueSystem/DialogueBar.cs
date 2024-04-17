@@ -13,7 +13,8 @@ public class DialogueBar : MonoBehaviour
     private Vector2 HiddenPosition = new Vector2(0, -165);
     private Vector2 VisiblePosition = new Vector2(0, 165);
     public Image image;
-    private float animationspeed = 100;
+    public Talker talkerdt;
+    private float animationspeed = 300;
     private void Awake(){
         dialogBox = GetComponent<Image>();
         rectTransform = GetComponent<RectTransform>();
@@ -28,7 +29,13 @@ public class DialogueBar : MonoBehaviour
             rectTransform.anchoredPosition += Vector2.up * animationspeed * Time.deltaTime;
             yield return null;
         }
+        ShowProfile();
         rectTransform.anchoredPosition = VisiblePosition;
+    }
+
+    public IEnumerator ShowProfile(){
+        image.sprite = talkerdt.sprite;
+        yield return null;
     }
 
 
