@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogueBar : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     private Image dialogBox;
     private RectTransform rectTransform;
     private Vector2 HiddenPosition = new Vector2(0, -165);

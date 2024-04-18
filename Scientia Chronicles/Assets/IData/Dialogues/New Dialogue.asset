@@ -15,7 +15,9 @@ MonoBehaviour:
   Sentences:
   - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
     messages:
-    - DJOSDSAJD
-    - DJOSDSAJD2
-    - DJOSDSAJD3
-    - DJOSDSAJD4
+    - "Ol\xE1, sou Kenji. \xC9 um prazer conhec\xEA-los. Sou assistente de pesquisa
+      aqui no laborat\xF3rio, e atualmente estou trabalhando sob a supervis\xE3o
+      da Dra. Mayuri Nakamura."
+    - "Nosso foco principal \xE9 a biologia molecular, especialmente em como certos
+      elementos interagem dentro das c\xE9lulas."
+    - "Estou ansioso para saber o quanto voc\xEA ir\xE1 aprender aqui!!"

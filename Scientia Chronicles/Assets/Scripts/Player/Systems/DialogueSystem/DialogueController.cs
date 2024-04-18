@@ -1,10 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 
 public class DialogueController : MonoBehaviour
 {
@@ -13,8 +17,9 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image profile;
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private Text dialogueText;
-    //[SerializeField] private float intervalBetween = 1;
-
+    [SerializeField] private float intervalletter = 1f;
+    public Text button;
+    public bool spacePressed = false;
     void Start(){
         GameEvents.Instance.OnStartDiologue += HandleStartDialog;
     }
@@ -25,24 +30,26 @@ public class DialogueController : MonoBehaviour
         
     }
 
+
+
     private IEnumerator StartDialog(DiologueData data){
         yield return dialogueBar.ShowBar();
         foreach (var sentence in data.Sentences)
         {
             talkerName.SetText(sentence.talkerData.talkerName);
             profile.sprite = sentence.talkerData.sprite;
-            foreach(var message in sentence.messages){
-                for(int i = 0; i < message.Length; i++){
-                    dialogueText.text = message;
-                }
+
+            foreach (string message in sentence.messages) {
+                dialogueText.text = message;
+                yield return new WaitForSeconds(5f);
             } 
         }
         
-        yield return dialogueBar.HideBar();
+       yield return dialogueBar.HideBar();
     }
 
     private IEnumerator EndDialog(){
-        yield return dialogueBar.HideBar();
+        yield return null;
     }
 
     private void OnDestroy(){

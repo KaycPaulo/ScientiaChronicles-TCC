@@ -144,7 +144,7 @@ TextureImporter:
         width: 148
         height: 253
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
         width: 142
         height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,6 +173,27 @@ TextureImporter:
       bones: []
       spriteID: 97d9c733a2f929340b32998c57eccd39
       internalID: -590456030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KenjiV2_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 104
+        width: 33
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb8a24c35d0eaa4dab19001ea7e75cc
+      internalID: -188660741
       vertices: []
       indices: 
       edges: []
@@ -190,6 +211,7 @@ TextureImporter:
     nameFileIdTable:
       KenjiV2_0: -1909424416
       KenjiV2_1: -590456030
+      KenjiV2_2: -188660741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
