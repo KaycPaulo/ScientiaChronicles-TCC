@@ -15,5 +15,5 @@ public class GameEvents : MonoBehaviour
     public void StartDialog(DiologueData diologueData) => OnStartDiologue?.Invoke(diologueData);
     public event Action OnFinishDiologue;
 
-    private void FinishDiologue() => OnFinishDiologue?.Invoke();
+    public void FinishDiologue() => OnFinishDiologue?.Invoke();
 }

@@ -9,8 +9,8 @@ public class ProfileManager : MonoBehaviour
     private Image profile;
     
     private RectTransform rectTransform;
-    private Vector2 HiddenPosition = new Vector2(0, -165);
-    private Vector2 VisiblePosition = new Vector2(0, 165);
+    private Vector2 HiddenPosition = new Vector2(2000, -0);
+    private Vector2 VisiblePosition = new Vector2(434, 0);
     private float animationspeed = 300;
     // Start is called before the first frame update
     private void Awake(){
@@ -24,8 +24,8 @@ public class ProfileManager : MonoBehaviour
 
     public IEnumerator ShowImage(){
         
-        while(rectTransform.anchoredPosition.x < VisiblePosition.x){
-            rectTransform.anchoredPosition += Vector2.left * animationspeed * Time.deltaTime;
+        while(rectTransform.anchoredPosition.x > VisiblePosition.x){
+            rectTransform.anchoredPosition += Vector2.up * animationspeed * Time.deltaTime;
             yield return null;
         }
 
