@@ -16,8 +16,17 @@ MonoBehaviour:
   - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
     messages:
     - "Ol\xE1, sou Kenji. \xC9 um prazer conhec\xEA-los. Sou assistente de pesquisa
-      aqui no laborat\xF3rio, e atualmente estou trabalhando sob a supervis\xE3o
-      da Dra. Mayuri Nakamura."
-    - "Nosso foco principal \xE9 a biologia molecular, especialmente em como certos
-      elementos interagem dentro das c\xE9lulas."
-    - "Estou ansioso para saber o quanto voc\xEA ir\xE1 aprender aqui!!"
+      aqui no laborat\xF3rio, e aquela que est\xE1 logo al\xED \xE9 a Pesquisadora
+      Chefe, Maruri."
+  - talkerData: {fileID: 11400000, guid: 053f19a95ec572a4d830f6df43f95668, type: 2}
+    messages:
+    - "Obrigado por receb\xEA-los Kenji, como ele disse eu sou a Pesquisadora que
+      administra e conduz as pesquisas desse Laboratorio \xE9 um prazer receb\xEA-los
+      aqui."
+  - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}
+    messages:
+    - "Bom \xE9 sempre um prazer ajudar!!"
+    - "at\xE9 uma proxima senhorita mayuri"
+  - talkerData: {fileID: 11400000, guid: 053f19a95ec572a4d830f6df43f95668, type: 2}
+    messages:
+    - "At\xE9 uma proxima Kenji"

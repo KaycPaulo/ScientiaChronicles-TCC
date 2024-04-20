@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.VersionControl;
 using UnityEngine;
@@ -19,8 +20,11 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private TMP_Text dialogueText;
 
+    private int index = 0;
+    private bool dialogActive = false;
+
     //private bool dialogActive = false; 
-    private float fadeColor = 0.5f;
+    private float fadeColor = 0.2f;
     private Color colorStart;    
     void Start(){
         colorStart = profile.color;
@@ -37,7 +41,7 @@ public class DialogueController : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private IEnumerator FadeColor(){
+    /*private IEnumerator FadeColor(){
         float elapsedTime = 0f;
         Color targetColor = colorStart;
         targetColor.a = 0f; // Torna a cor final totalmente transparente
@@ -54,10 +58,12 @@ public class DialogueController : MonoBehaviour
         Color finalColor = profile.color;
         finalColor.a = 0f;
         profile.color = finalColor;
-    }
+
+    }*/
 
     private IEnumerator StartDialog(DiologueData data){
         
+        dialogActive = true;
         profile.enabled = false;
         talkerName.text = "";
 
@@ -65,18 +71,25 @@ public class DialogueController : MonoBehaviour
         profile.enabled = true;
         foreach (var sentence in data.Sentences)
         {
+
             talkerName.SetText(sentence.talkerData.talkerName);
             profile.sprite = sentence.talkerData.sprite;
 
-            foreach (string message in sentence.messages) {
-                dialogueText.text = message;
-                yield return new WaitForSeconds(5f);
-            } 
+            foreach(string message in sentence.messages) {
+                yield return dialogueText.text = message;
+                yield return new WaitUntil(()=> Input.GetKeyDown(KeyCode.Space));
+                
+                if(!dialogActive) break;
+            }
         }
-        StartCoroutine(FadeColor());
-        //profile.enabled = false;
+        //StartCoroutine(FadeColor());
+        profile.enabled = false;
         yield return dialogueBar.HideBar();
+
+        dialogueText.text = "";
     }
+
+    
     private void OnDestroy(){
         GameEvents.Instance.OnStartDiologue -= HandleStartDialog;
     }

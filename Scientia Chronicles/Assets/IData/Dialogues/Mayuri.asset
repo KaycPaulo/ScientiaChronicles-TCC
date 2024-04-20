@@ -15,4 +15,6 @@ MonoBehaviour:
   Sentences:
   - talkerData: {fileID: 11400000, guid: 053f19a95ec572a4d830f6df43f95668, type: 2}
     messages:
-    - "BOB\xC3O"
+    - KU
+    - RA
+    - MA
