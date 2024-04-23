@@ -410,7 +410,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2074,8 +2074,6 @@ MonoBehaviour:
   profile: {fileID: 1735847721}
   talkerName: {fileID: 283734162}
   dialogueText: {fileID: 1270840107}
-  button: {fileID: 0}
-  spacePressed: 0
 --- !u!1 &152997300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,7 +2248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde72bef1d283064dad63bf08b1d8592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ds: {fileID: 11400000, guid: f5c3a5b5e060e7e45bbbc9b8d0a1c9e2, type: 2}
+  ds: {fileID: 0}
 --- !u!70 &177550779
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2920,7 +2918,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -6236,7 +6234,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0

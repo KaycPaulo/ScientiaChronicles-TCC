@@ -15,15 +15,12 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] private DialogueBar dialogueBar;
     [SerializeField] private DiologueData diologueData;
-    [SerializeField] private ProfileManager profileManager;
     [SerializeField] private Image profile;
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private TMP_Text dialogueText;
 
     private int index = 0;
     private bool dialogActive = false;
-
-    //private bool dialogActive = false; 
     private float fadeColor = 0.2f;
     private Color colorStart;    
     void Start(){
@@ -41,7 +38,7 @@ public class DialogueController : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    /*private IEnumerator FadeColor(){
+    private IEnumerator FadeColor(){
         float elapsedTime = 0f;
         Color targetColor = colorStart;
         targetColor.a = 0f; // Torna a cor final totalmente transparente
@@ -59,7 +56,7 @@ public class DialogueController : MonoBehaviour
         finalColor.a = 0f;
         profile.color = finalColor;
 
-    }*/
+    }
 
     private IEnumerator StartDialog(DiologueData data){
         
