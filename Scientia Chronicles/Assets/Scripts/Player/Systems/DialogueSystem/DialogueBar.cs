@@ -13,7 +13,7 @@ public class DialogueBar : MonoBehaviour
     private RectTransform rectTransform;
     private Vector2 HiddenPosition = new Vector2(0, -165);
     private Vector2 VisiblePosition = new Vector2(0, 165);
-    public Talker talkerdt;
+    public Talker talkerDt;
     private float animationspeed = 300;
     private void Awake(){
         dialogBox = GetComponent<Image>();

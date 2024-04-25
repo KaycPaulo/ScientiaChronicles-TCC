@@ -32,12 +32,4 @@ public class DialogueText : MonoBehaviour
             textbox.maxVisibleCharacters++;
         }
     }
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
 }

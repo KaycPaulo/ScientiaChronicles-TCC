@@ -15,43 +15,17 @@ public class Player : MonoBehaviour
     bool isWalking = false;
     //Inicialização das variáveis que irão pegar os componentes no Player
     
-    private bool canMove = true;
-    
 
     void Awake (){
         rig = GetComponent<Rigidbody2D>();
         isWalking = false;
     }
-    /*void Start()
-    {
-        GameEvents.Instance.OnStartDiologue += HandleStartDialog;
-        GameEvents.Instance.OnFinishDiologue += HandleFinishDialog;
 
-    }
-
-    void OnDestroy(){
-        GameEvents.Instance.OnStartDiologue -= HandleStartDialog;
-        GameEvents.Instance.OnFinishDiologue -= HandleFinishDialog;
-    }*/
     
-    private void HandleStartDialog(DiologueData data)
-    {
-        canMove = false;
-    }
-    private void HandleFinishDialog()
-    {
-        canMove = true;
-    }
-
     
     //Método que é chamado a cada frame
     void FixedUpdate()
     {
-        if(!canMove){
-            Movement = Vector2.zero;
-            return;
-        }
-
         inputX = Input.GetAxis("Horizontal");
         inputY = Input.GetAxis("Vertical");
         rig.velocity = new Vector2(inputX*speed, inputY*speed);

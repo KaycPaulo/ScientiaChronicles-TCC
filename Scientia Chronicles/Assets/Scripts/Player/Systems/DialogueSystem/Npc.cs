@@ -7,13 +7,10 @@ public class Npc : MonoBehaviour
     [SerializeField] DiologueData ds;
     private void OnTriggerEnter2D(Collider2D other){
         Player player;
-
         
         if(other.TryGetComponent<Player>(out player)){
             Debug.Log("Player is Near");
-            if(!Input.GetKeyDown(KeyCode.Space)){
-                GameEvents.Instance.StartDialog(ds);
-            }
+            GameEvents.Instance.StartDialog(ds);
         }
     }
     
