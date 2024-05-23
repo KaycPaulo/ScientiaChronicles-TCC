@@ -18,6 +18,7 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image profile;
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private TMP_Text dialogueText;
+    private Player player;
 
    
     private bool dialogActive = false;
@@ -41,6 +42,7 @@ public class DialogueController : MonoBehaviour
         dialogActive = true;
         profile.enabled = false;
         talkerName.text = "";
+        
 
         yield return dialogueBar.ShowBar();
         profile.enabled = true;
@@ -57,7 +59,7 @@ public class DialogueController : MonoBehaviour
                 if(!dialogActive) break;
             }
         }
-
+        
         profile.enabled = false;
         yield return dialogueBar.HideBar();
         talkerName.text = "";
