@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 
-public enum MaterialType{
+public enum MaterialType
+{
     none,
     Minerals,
     animals,
@@ -12,15 +11,16 @@ public enum MaterialType{
     synthetics
 }
 
-[CreateAssetMenu(fileName ="New item", menuName ="ScriptableObject/Create Item")]
+[CreateAssetMenu(fileName = "New item", menuName = "ScriptableObject/Create Item")]
 public class Itens : ScriptableObject
 {
-    public Sprite Icon;
-    public string Name;
+    public Sprite sprite;
+    public string name;
     public string Description;
     public MaterialType materialType;
-    public int ID{get; private set;}
+    public bool isStack;
+    public int id { get; private set; }
 
     private void OnEnable() =>
-    ID = this.GetInstanceID();
+    id = this.GetInstanceID();
 }
