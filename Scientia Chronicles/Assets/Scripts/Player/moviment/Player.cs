@@ -11,40 +11,53 @@ public class Player : MonoBehaviour
     Vector2 Movement;
     float inputX = 0, inputY = 0;
     private Rigidbody2D rig;
+    private bool enabled = true;
     public float speed;
     bool isWalking = false;
     //Inicialização das variáveis que irão pegar os componentes no Player
-    
 
-    void Awake (){
+
+    void Awake()
+    {
         rig = GetComponent<Rigidbody2D>();
         isWalking = false;
     }
 
-    
-    
+
+
     //Método que é chamado a cada frame
     void FixedUpdate()
     {
-        inputX = Input.GetAxis("Horizontal");
-        inputY = Input.GetAxis("Vertical");
-        rig.velocity = new Vector2(inputX*speed, inputY*speed);
+        if (enabled == true)
+        {
+            inputX = Input.GetAxis("Horizontal");
+            inputY = Input.GetAxis("Vertical");
+            rig.velocity = new Vector2(inputX * speed, inputY * speed);
 
-        isWalking = (inputX != 0 || inputY != 0);
+            isWalking = (inputX != 0 || inputY != 0);
 
-        if(isWalking/*||canMove != true*/){
+            if (isWalking)
+            {
 
-            Movement = new Vector2(inputX, inputY).normalized;
-            rig.velocity = Movement*speed;
-            playercontroller.SetFloat("input_x", inputX);
-            playercontroller.SetFloat("input_y", inputY);
+                Movement = new Vector2(inputX, inputY).normalized;
+                rig.velocity = Movement * speed;
+                playercontroller.SetFloat("input_x", inputX);
+                playercontroller.SetFloat("input_y", inputY);
+            }
+            Animation();
         }
+    }
+
+    private void Animation()
+    {
         playercontroller.SetBool("isWalking", isWalking);
 
-        if (inputX < 0){
+        if (inputX < 0)
+        {
             playercontroller.transform.localScale = new Vector3(-1, 1, 1); // Inverte a escala horizontalmente
         }
-        else if (inputX > 0){
+        else if (inputX > 0)
+        {
             playercontroller.transform.localScale = new Vector3(1, 1, 1); // Restaura a escala original
         }
     }

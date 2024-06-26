@@ -1870,7 +1870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &140168363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2193,7 +2193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bfea3c85dc6134fb89693d429c51fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSlots: 42
+  maxSlots: 28
   inventoryPanel: {fileID: 1925303273}
   slotPrefab: {fileID: 3662152660287493002, guid: 7795b1c0b58edb44698725446a837bf8, type: 3}
   title: {fileID: 1755058000}
