@@ -1,12 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
-    //Variável pública que o valor poderá ser trocado quando quiser na engine
     public Animator playercontroller;
     Vector2 Movement;
     float inputX = 0, inputY = 0;
@@ -14,18 +9,14 @@ public class Player : MonoBehaviour
     private bool enabled = true;
     public float speed;
     bool isWalking = false;
-    //Inicialização das variáveis que irão pegar os componentes no Player
-
-
+    
     void Awake()
     {
         rig = GetComponent<Rigidbody2D>();
         isWalking = false;
     }
 
-
-
-    //Método que é chamado a cada frame
+    //O Método fixedUpdate que é chamado a cada frame!! 
     void FixedUpdate()
     {
         if (enabled == true)

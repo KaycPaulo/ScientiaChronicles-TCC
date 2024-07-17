@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//scriptable...
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "ScriptableObject/Create Dialogue")]
 public class DiologueData : ScriptableObject
 {

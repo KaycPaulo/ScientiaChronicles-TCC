@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Npc : MonoBehaviour
 {
-
+    
     [SerializeField] DiologueData ds;
     private bool playerInRange = false;
     private Player player;
@@ -28,8 +28,6 @@ public class Npc : MonoBehaviour
     private void ChangeState(Collider2D other){
         Player player;
         
-        
-       
         if(other.TryGetComponent<Player>(out player)){
             playerInRange = !playerInRange;
         }

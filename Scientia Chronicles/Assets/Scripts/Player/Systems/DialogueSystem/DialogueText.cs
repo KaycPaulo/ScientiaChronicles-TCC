@@ -10,6 +10,7 @@ public class DialogueText : MonoBehaviour
     [SerializeField] private float intervalletter = 2f;
     private TMP_Text textbox;
     
+    //awake
     private void Awake() => GetComponent<Text>();
     public IEnumerator ShowText(string content){
         textbox.maxVisibleCharacters = 0;

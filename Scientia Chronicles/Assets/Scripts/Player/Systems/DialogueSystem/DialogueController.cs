@@ -63,6 +63,6 @@ public class DialogueController : MonoBehaviour
 
     
     private void OnDestroy(){
-        //GameEvents.Instance.OnStartDiologue -= HandleStartDialog;
+        GameEvents.Instance.OnStartDiologue -= HandleStartDialog;
     }
 }

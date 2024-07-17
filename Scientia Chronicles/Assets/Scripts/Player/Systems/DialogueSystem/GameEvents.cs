@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
+
+//gameevents
 public class GameEvents : MonoBehaviour
 {
     public static GameEvents Instance { get; private set;}
