@@ -33,8 +33,7 @@ public class Npc : MonoBehaviour
         }
         
     }
-
-
+    
 
     private void StartDialogue(){
         GameEvents.Instance.StartDialog(ds);

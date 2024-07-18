@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class DialogueBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     
     private Image dialogBox;
     private RectTransform rectTransform;
