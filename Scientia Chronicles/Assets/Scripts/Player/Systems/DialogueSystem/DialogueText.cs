@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//classe para polimento de sistema de dialogo, ñ está em uso ainda.
 [RequireComponent(typeof(TMP_Text))]
 public class DialogueText : MonoBehaviour
 {

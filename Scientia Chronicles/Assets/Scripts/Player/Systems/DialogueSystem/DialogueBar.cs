@@ -1,13 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
 public class DialogueBar : MonoBehaviour
 {
-    // Start is called before the first frame update 
+    
     
     private Image dialogBox;
     private RectTransform rectTransform;

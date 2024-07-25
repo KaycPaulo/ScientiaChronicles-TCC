@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
-  m_Name: New Dialogue
+  m_Name: Cena1 RecepcaoKenjMayure
   m_EditorClassIdentifier: 
   Sentences:
   - talkerData: {fileID: 11400000, guid: 06ea93661b31ea64b9ef84689a39b843, type: 2}

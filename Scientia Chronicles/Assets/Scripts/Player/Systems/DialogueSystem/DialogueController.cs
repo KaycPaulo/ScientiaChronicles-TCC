@@ -51,7 +51,7 @@ public class DialogueController : MonoBehaviour
                 yield return dialogueText.text = message;
                 yield return new WaitUntil(()=> Input.GetKeyDown(KeyCode.Space));
                 
-                if(!dialogActive) break;
+                if(!dialogActive) yield break;
             }
         }
         
