@@ -9,11 +9,13 @@ using UnityEngine.UI;
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] private DialogueBar dialogueBar;
-    [SerializeField] private DiologueData diologueData;
     [SerializeField] private Image profile;
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private TMP_Text dialogueText;
-    private Player player;
+    private DiologueData diologueData;
+    
+
+    
 
    
     private bool dialogActive = false;

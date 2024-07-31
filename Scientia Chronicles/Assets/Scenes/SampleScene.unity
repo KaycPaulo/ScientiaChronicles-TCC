@@ -2002,7 +2002,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBar: {fileID: 2020250450}
-  diologueData: {fileID: 0}
   profile: {fileID: 1735847721}
   talkerName: {fileID: 283734162}
   dialogueText: {fileID: 1270840107}
