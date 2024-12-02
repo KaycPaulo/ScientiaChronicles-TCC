@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
-  m_Name: Mayuri
+  m_Script: {fileID: 11500000, guid: 43efa2b73bfaf144f806baaa5256446f, type: 3}
+  m_Name: New item
   m_EditorClassIdentifier: 
-  Sentences:
-  - talkerData: {fileID: 11400000, guid: 053f19a95ec572a4d830f6df43f95668, type: 2}
-    messages:
-    - KURAMA
-    - RA
-    - MA
+  sprite: {fileID: -814477238, guid: 2af391437b774fa4189de29276cc75d1, type: 3}
+  name: Elucidator
+  Description: 
+  materialType: 0
+  isStack: 0

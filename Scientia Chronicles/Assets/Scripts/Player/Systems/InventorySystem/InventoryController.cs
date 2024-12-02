@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     public List<InventorySlot> slots;
+    public ListItem itensList;
     public int maxSlots;
     public GameObject inventoryPanel;
     public GameObject slotPrefab;
@@ -20,27 +21,18 @@ public class InventoryController : MonoBehaviour
         InitializeSlots();
         CreateInventoryUI();
     }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isInventoryOpen == false)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ToggleInventory();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && isInventoryOpen == true)
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            ToggleInventory();
+            AddGetItem();
         }
-
-        // if (Input.GetKeyDown(KeyCode.E) && isInventoryOpen == false){
-        //     isInventoryOpen = true;
-        //     ToggleInventory(isInventoryOpen);
-        // }
-
-        // if(Input.GetKeyDown(KeyCode.Escape) && inventoryPanel == true){
-        //     isInventoryOpen = false;
-        //     ToggleInventory(isInventoryOpen);
-        // }
     }
 
     private void InitializeSlots()
@@ -58,30 +50,61 @@ public class InventoryController : MonoBehaviour
 
         for (int i = 0; i < maxSlots; i++)
         {
+            // Instancia o slotPrefab dentro do painel do inventário
             GameObject slotGo = Instantiate(slotPrefab, inventoryPainel);
             Image slotImage = slotGo.GetComponent<Image>();
 
-            slotImage = null;
+            InventorySlot slot = new InventorySlot();
+            slot.Initialize(slotImage, null);
+
+            slots.Add(slot);
         }
     }
 
     private void ToggleInventory()
     {
-        title.enabled = !title.enabled;
         isInventoryOpen = !isInventoryOpen;
         inventoryPanel.SetActive(isInventoryOpen);
+        Debug.Log("Inventário" + (isInventoryOpen ? "aberto" : "fechado"));
     }
+
+
+    // Teste da função do inventario
+    public void AddGetItem()
+    {
+        if (itensList == null || itensList.itens == null || itensList.itens.Count == 0)
+        {
+             Debug.Log("Nenhum item disponível na lista.");
+             return;
+        }
+
+        // pega um item da posição zero da lista
+        
+        Itens getItem = itensList.itens[0];
+        
+        addItensInventory(getItem, 1);  // Passando o item resgatado e a quantidade 1
+    }
+
 
     public void addItensInventory(Itens itens, int amount)
     {
+        bool itemAdded = false;
 
-        foreach (InventorySlot slot in slots)
+        for (int i = 0; i < slots.Count; i++)
         {
-            if (slot.itens != null)
+            if (slots[i].isEmpty())
             {
-                slot.addItens(itens, amount);
+                slots[i].AddItens(itens, amount);  // Adiciona o item ao slot
+                itemAdded = true;
+                break;  // Sai do loop após adicionar o item
             }
         }
+
+        if (!itemAdded)
+        {
+            Debug.Log("Inventário cheio! Não foi possível adicionar o item.");
+        }
+
     }
 
 }

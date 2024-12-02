@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
-  m_Name: Mayuri
+  m_Script: {fileID: 11500000, guid: e231b498bb192f444926bbe80faa130a, type: 3}
+  m_Name: New ItemList
   m_EditorClassIdentifier: 
-  Sentences:
-  - talkerData: {fileID: 11400000, guid: 053f19a95ec572a4d830f6df43f95668, type: 2}
-    messages:
-    - KURAMA
-    - RA
-    - MA
+  itens:
+  - {fileID: 11400000, guid: 42d8701546c81e749b8b145d2f890334, type: 2}

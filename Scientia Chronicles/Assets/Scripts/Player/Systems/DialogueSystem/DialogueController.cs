@@ -13,14 +13,15 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TMP_Text talkerName;
     [SerializeField] private TMP_Text dialogueText;
     private DiologueData diologueData;
-    
 
-    
 
-   
+
+
+
     private bool dialogActive = false;
-    
-    void Start(){
+
+    void Start()
+    {
         GameEvents.Instance.OnStartDiologue += HandleStartDialog;
         GameEvents.Instance.OnFinishDiologue += HandleFinishDialog;
     }
@@ -34,12 +35,13 @@ public class DialogueController : MonoBehaviour
     }
 
 
-    private IEnumerator StartDialog(DiologueData data){
-        
+    private IEnumerator StartDialog(DiologueData data)
+    {
+
         dialogActive = true;
         profile.enabled = false;
         talkerName.text = "";
-        
+
 
         yield return dialogueBar.ShowBar();
         profile.enabled = true;
@@ -49,22 +51,24 @@ public class DialogueController : MonoBehaviour
             talkerName.SetText(sentence.talkerData.talkerName);
             profile.sprite = sentence.talkerData.sprite;
 
-            foreach(string message in sentence.messages) {
+            foreach (string message in sentence.messages)
+            {
                 yield return dialogueText.text = message;
-                yield return new WaitUntil(()=> Input.GetKeyDown(KeyCode.Space));
-                
-                if(!dialogActive) yield break;
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+                if (!dialogActive) yield break;
             }
         }
-        
+
         profile.enabled = false;
         yield return dialogueBar.HideBar();
         talkerName.text = "";
         dialogueText.text = "";
     }
 
-    
-    private void OnDestroy(){
+
+    private void OnDestroy()
+    {
         GameEvents.Instance.OnStartDiologue -= HandleStartDialog;
     }
 }

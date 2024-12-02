@@ -15,7 +15,7 @@ public enum MaterialType
 public class Itens : ScriptableObject
 {
     public Sprite sprite;
-    public string name;
+    public new string name;
     public string Description;
     public MaterialType materialType;
     public bool isStack;

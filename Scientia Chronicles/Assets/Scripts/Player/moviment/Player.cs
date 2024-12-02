@@ -3,10 +3,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Animator playercontroller;
-    Vector2 Movement;
+    private Vector2 Movement;
     float inputX = 0, inputY = 0;
     private Rigidbody2D rig;
-    private bool enabled = true;
+    private new bool enabled = true;
     public float speed;
     bool isWalking = false;
     
