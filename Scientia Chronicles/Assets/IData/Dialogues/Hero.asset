@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
-  m_Name: New Dialogue
+  m_Name: Hero
   m_EditorClassIdentifier: 
   Sentences:
-  - talkerData: {fileID: 0}
-    messages: []
-  - talkerData: {fileID: 0}
-    messages: []
+  - talkerData: {fileID: 11400000, guid: 4e01145cd00bc064d884e4ac1dae4d10, type: 2}
+    messages:
+    - "Kyle e Paola est\xE3o me esperando, \xE9 melhor ir."
