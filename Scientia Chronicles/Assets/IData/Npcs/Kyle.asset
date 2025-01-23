@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcf965c5625f6e0468aff46118de1a38, type: 3}
-  m_Name: Kenji
+  m_Name: Kyle
   m_EditorClassIdentifier: 
   sprite: {fileID: -1909424416, guid: c7e914f5dd9cfe94fac8cc3776c9d4f4, type: 3}
-  talkerName: Kenji
+  talkerName: Kyle

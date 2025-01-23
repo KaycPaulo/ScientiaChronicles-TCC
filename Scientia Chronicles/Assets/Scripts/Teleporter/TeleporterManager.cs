@@ -21,10 +21,6 @@ public class TeleporterManager : MonoBehaviour
         if (!teleportPoints.ContainsKey(id))
         {
             teleportPoints.Add(id, point);
-             Debug.Log($"Ponto de teleporte registrado: ID = {id}, Posição = {point.position}");
-        }
-        else{
-            Debug.LogWarning($"Ponto de teleporte com ID '{id}' já foi registrado.");
         }
     }
 
@@ -34,7 +30,6 @@ public class TeleporterManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Ponto de teleporte com ID '{id}' não encontrado.");
             return null;
         }
     }

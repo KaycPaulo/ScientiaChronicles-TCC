@@ -16,3 +16,6 @@ MonoBehaviour:
   - talkerData: {fileID: 11400000, guid: 4e01145cd00bc064d884e4ac1dae4d10, type: 2}
     messages:
     - "Kyle e Paola est\xE3o me esperando, \xE9 melhor ir."
+    isQuestion: 0
+    playerChoices: []
+  CanRepeat: 0

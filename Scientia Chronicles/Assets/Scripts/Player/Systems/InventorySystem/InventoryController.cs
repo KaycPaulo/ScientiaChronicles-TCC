@@ -28,11 +28,6 @@ public class InventoryController : MonoBehaviour
         {
             ToggleInventory();
         }
-
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            AddGetItem();
-        }
     }
 
     private void InitializeSlots()
@@ -46,18 +41,20 @@ public class InventoryController : MonoBehaviour
 
     private void CreateInventoryUI()
     {
-        slots = new List<InventorySlot>(maxSlots);
-
         for (int i = 0; i < maxSlots; i++)
         {
             // Instancia o slotPrefab dentro do painel do inventário
             GameObject slotGo = Instantiate(slotPrefab, inventoryPainel);
-            Image slotImage = slotGo.GetComponent<Image>();
 
+            // Aqui, vamos garantir que o slotPrefab tem uma imagem para o fundo do slot
+            Image slotImage = slotGo.GetComponent<Image>();  // 
+            Image iconItem = slotGo.GetComponentInChildren<Image>();  
+
+            // Inicializa o slot com o Image do ícone
             InventorySlot slot = new InventorySlot();
-            slot.Initialize(slotImage, null);
+            slot.Initialize(slotImage, iconItem);  // Passando o iconItem corretamente
 
-            slots.Add(slot);
+            slots[i] = slot;
         }
     }
 
@@ -65,24 +62,17 @@ public class InventoryController : MonoBehaviour
     {
         isInventoryOpen = !isInventoryOpen;
         inventoryPanel.SetActive(isInventoryOpen);
-        Debug.Log("Inventário" + (isInventoryOpen ? "aberto" : "fechado"));
     }
 
 
     // Teste da função do inventario
     public void AddGetItem()
     {
-        if (itensList == null || itensList.itens == null || itensList.itens.Count == 0)
+        if (itensList != null && itensList.itens.Count > 0)
         {
-             Debug.Log("Nenhum item disponível na lista.");
-             return;
+            Itens getItem = itensList.itens[0];
+            addItensInventory(getItem, 1);
         }
-
-        // pega um item da posição zero da lista
-        
-        Itens getItem = itensList.itens[0];
-        
-        addItensInventory(getItem, 1);  // Passando o item resgatado e a quantidade 1
     }
 
 
@@ -99,12 +89,16 @@ public class InventoryController : MonoBehaviour
                 break;  // Sai do loop após adicionar o item
             }
         }
-
-        if (!itemAdded)
-        {
-            Debug.Log("Inventário cheio! Não foi possível adicionar o item.");
-        }
-
     }
 
+    public int GetItemQuantity(Itens item){
+        int totalAmount = 0;
+
+        foreach(var slot in slots){
+            if(slot.itens != null && slot.itens.id == item.id){
+                totalAmount += slot.GetQuantity();
+            }
+        }
+        return totalAmount;
+    }
 }

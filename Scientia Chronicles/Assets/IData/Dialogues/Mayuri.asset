@@ -18,3 +18,8 @@ MonoBehaviour:
     - KURAMA
     - RA
     - MA
+    isQuestion: 1
+    playerChoices:
+    - choiceText: Ku
+    - choiceText: rama
+    - choiceText: Kurama

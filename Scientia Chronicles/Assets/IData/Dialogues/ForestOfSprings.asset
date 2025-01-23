@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
+  m_Name: ForestOfSprings
+  m_EditorClassIdentifier: 
+  Sentences:
+  - talkerData: {fileID: 11400000, guid: 020d14da7c011ee41a82724ebc46982f, type: 2}
+    messages:
+    - "Uau, olha essas \xE1rvores! Elas s\xE3o gigantes! D\xE1 at\xE9 um friozinho
+      s\xF3 de olhar, n\xE9?"
+    - "E olha isso, Paola! D\xE1 pra ouvir o som da \xE1gua de longe. Aposto que
+      \xE9 uma corrente bem forte por aqui. J\xE1 d\xE1 pra sentir a for\xE7a da
+      natureza ao nosso redor, n\xE3o \xE9?"
+    - "\"Ser\xE1 que \xE9 por isso que tudo aqui parece t\xE3o... vivo? As plantas,
+      os animais, tudo depende dessa \xE1gua. Voc\xEA n\xE3o acha fascinante?"
+    isQuestion: 0
+    playerChoices: []
+  - talkerData: {fileID: 11400000, guid: 3ddd34a465cbf374c88c61cf7ce5a954, type: 2}
+    messages:
+    - "Com certeza! Olha esse ecossistema, parece um para\xEDso para as plantas e
+      os animais que adoram umidade. Eu aposto que vamos encontrar v\xE1rias esp\xE9cies
+      novas por aqui.\""
+    - "E essa \xE1gua, com certeza, tem uns minerais especiais, por isso o ambiente
+      \xE9 t\xE3o \xFAnico. D\xE1 at\xE9 vontade de passar o dia inteiro por aqui,
+      s\xF3 explorando e observando tudo, n\xE3o \xE9?"
+    - "Olha s\xF3 essas plantas aqui perto do rio! D\xE1 pra ver como elas se adaptaram
+      \xE0 umidade. Se eu achar algo interessante, eu te mostro, combinado?"
+    isQuestion: 0
+    playerChoices: []
+  - talkerData: {fileID: 11400000, guid: 020d14da7c011ee41a82724ebc46982f, type: 2}
+    messages:
+    - "Legal, mas olha s\xF3 a \xE1gua! J\xE1 d\xE1 pra ver o reflexo das \xE1rvores."
+    isQuestion: 0
+    playerChoices: []
+  CanRepeat: 1

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c487a2b81c916434397cfe62498118ea, type: 3}
+  m_Name: Kaleb(Lake)
+  m_EditorClassIdentifier: 
+  Sentences:
+  - talkerData: {fileID: 11400000, guid: 020d14da7c011ee41a82724ebc46982f, type: 2}
+    messages:
+    - "Olhe essas ra\xEDzes enormes! Parece at\xE9 que elas est\xE3o tentando sair
+      do ch\xE3o."
+    - "Esses p\xE1ssaros s\xE3o barulhentos, hein? Deve ser hora do almo\xE7o pra
+      eles."
+    - "Cara, eu n\xE3o imaginava que ia encontrar um lugar t\xE3o bonito assim por
+      aqui."
+    - "As folhas aqui refletem a luz de um jeito diferente. Parece at\xE9 que est\xE3o
+      brilhando."
+    - "Olha s\xF3 essas flores! S\xE3o pequenas, mas chamam aten\xE7\xE3o de longe.
+      Bem legal"
+    isQuestion: 0
+    playerChoices: []
+  CanRepeat: 1

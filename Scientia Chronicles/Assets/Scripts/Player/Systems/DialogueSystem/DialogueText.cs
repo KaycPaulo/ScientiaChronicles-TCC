@@ -1,27 +1,24 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-//classe para polimento de sistema de dialogo, ñ está em uso ainda.
 [RequireComponent(typeof(TMP_Text))]
 public class DialogueText : MonoBehaviour
 {
-    [SerializeField] private float intervalletter = 2f;
+    [SerializeField] private float intervalLetter = 0.001f; 
     private TMP_Text textbox;
 
-    //awake
-    private void Awake() => GetComponent<Text>();
+    private void Awake() => textbox = GetComponent<TMP_Text>();
 
-
-
+    
     public IEnumerator ShowText(string content)
     {
+        textbox.text = content; 
         textbox.maxVisibleCharacters = 0;
-        textbox.text = content;
+        
+        yield return new WaitForSeconds(0.01f);
 
-        yield return RevealChars();
+        yield return RevealChars(); 
     }
 
     public void HideText()
@@ -36,9 +33,8 @@ public class DialogueText : MonoBehaviour
     {
         while (textbox.maxVisibleCharacters < textbox.textInfo.characterCount)
         {
-            yield return new WaitForSeconds(intervalletter);
+            yield return new WaitForSeconds(intervalLetter); 
             textbox.maxVisibleCharacters++;
-            Debug.Log(textbox.maxVisibleCharacters);
         }
     }
 }

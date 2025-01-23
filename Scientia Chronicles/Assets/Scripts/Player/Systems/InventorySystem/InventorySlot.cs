@@ -21,14 +21,30 @@ public class InventorySlot
         {
             itens = newItens;
             quantity = amount;
-            //corrigir o resgate da sprite do item
-            iconItem.sprite = itens.sprite;
+
+            // Atribui o sprite do item ao ícone
+            iconItem.sprite = newItens.sprite;
+            iconItem.enabled = true;  // Habilita a exibição do ícone do item
             UpdateSlotVisuals();
         }
         else if (itens.id == newItens.id && itens.isStack)
         {
             quantity += amount;
             UpdateSlotVisuals();
+        }
+    }
+
+    private void UpdateSlotVisuals()
+    {
+        if (isEmpty())
+        {
+            if (iconItem != null) iconItem.enabled = false;  // Desabilita o ícone quando o slot está vazio
+        }
+        else
+        {
+            if (iconItem != null) iconItem.enabled = true;   // Habilita o ícone quando o slot não está vazio
+            iconItem.sprite = itens.sprite;     
+            iconItem.color = Color.white;             // Atualiza o sprite do ícone com o item
         }
     }
 
@@ -51,7 +67,8 @@ public class InventorySlot
 
     public bool isEmpty()
     {
-        return itens == null;
+        bool empty = itens == null;
+        return empty;
     }
 
     private void ClearSlot()
@@ -61,19 +78,6 @@ public class InventorySlot
         UpdateSlotVisuals();
     }
 
-    private void UpdateSlotVisuals()
-    {
-        if (isEmpty())
-        {
-            if (iconItem != null) iconItem.enabled = false;
-            if (iconItem != null) iconItem.sprite = null;
-        }
-        else
-        {
-            iconItem.enabled = true;
-            iconItem.sprite = itens.sprite;
-        }
-    }
 
     public int GetQuantity()
     {
